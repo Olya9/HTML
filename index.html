@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body class="page">
     <header class="header">
       <div class="header__content">
@@ -27,11 +28,38 @@
             <ul class="menu">
               <li><a href="#" class="menu__link menu__link_bold">Home</a></li>
               <li><a href="#" class="menu__link">Stories</a></li>
-              <li>
+              <li class="popup">
                 <a href="#" class="menu__link"
                   >Library
                   <img class="menu__arrow" src="./img/Arrow.png" alt=""
                 /></a>
+                <div class="popup__menu">
+                  <div class="popup__item">
+                    <h2 class="popup__title">Acquire Users</h2>
+                    <p class="popup__text">
+                      Work with the tools and services you use.
+                    </p>
+                  </div>
+                  <div class="popup__item">
+                    <h2 class="popup__title">Engage Customers</h2>
+                    <p class="popup__text">
+                      Get started with our simple snippet of JavaScript.
+                    </p>
+                  </div>
+                  <div class="popup__item">
+                    <h2 class="popup__title">Book Appointments</h2>
+                    <p class="popup__text">
+                      We offer measures like 2FA to ensure the safety.
+                    </p>
+                  </div>
+                  <div class="popup__item">
+                    <h2 class="popup__title">Generate Leads</h2>
+                    <p class="popup__text">
+                      Generate Leads Become a better designer by learning this
+                      courses.
+                    </p>
+                  </div>
+                </div>
               </li>
               <li class="menu__button">
                 <a href="#" class="button">Get Started</a>
@@ -52,5 +80,157 @@
         </div>
       </div>
     </header>
+
+    <main>
+      <section class="about">
+        <div class="about__info-blocks">
+          <div class="about__info">
+            <h2 class="about__title">What is it about?</h2>
+            <p class="about__text">
+              Building a website for a startup that looks amazing is not a
+              rocket science anymore.
+            </p>
+          </div>
+          <div class="about__info">
+            <h2 class="about__title">Who is it for?</h2>
+            <p class="about__text">
+              Startups, small companies and teams, entrepreneurs and web
+              developers.
+            </p>
+          </div>
+        </div>
+        <!-- <div class="about__logos">
+          <ul>
+            <li><img class="logo" src="./img/hork.png" alt="" /></li>
+            <li><img class="logo" src="./img/for.png" alt="" /></li>
+            <li><img class="logo" src="" alt="" /></li>
+            <li><img class="logo" src="" alt="" /></li>
+            <li><img class="logo" src="" alt="" /></li>
+            <li><img class="logo" src="" alt="" /></li>
+          </ul>
+        </div> -->
+      </secton>
+      <section class="features">
+        <img class="features__left-img" src="./img/features-left.png" alt="" />
+
+        <div class="features__info">
+          <div class="features__content">
+            <h2 class="features__title features__title-desc">Features</h2>
+            <h2 class="features__title features__title-mob">
+              Acquire Customers
+            </h2>
+            <h3 class="features__subtitle">Easily find leads and customers</h3>
+            <p class="features__text">
+              Send one-off and automated email, push, and in-app messages to
+              people. Create better stories.
+            </p>
+            <div class="features__desc">
+              <h4 class="features__bottom-title">
+                <img
+                  class="features__title-img"
+                  src="./img/features-icon.png"
+                  alt=""
+                />
+                Acquire new customers
+              </h4>
+              <p class="features__bottom-text">
+                Everything you need to start building – including open-source
+                code, documentation.
+              </p>
+              <div class="features__users">
+                <img class="features__icon" src="./img/Icon-darc.png" alt="" />
+                <p class="features__users-text">Engage users</p>
+              </div>
+              <div class="features__users">
+                <img class="features__icon" src="./img/Icon-darc2.png" alt="" />
+                <p class="features__users-text">Develop across platforms</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img class="features__img" src="./img/features.png" alt="" />
+      </section>
+
+      <section class="team">
+        <div class="team__image">
+          <img class="team__desc-img" src="./img/team.png" alt="" />
+          <img class="team__mob-img" src="./img/team-mob.png" alt="" />
+          <p class="team__cap team__cap_mob">
+            A better way to acquire new users
+          </p>
+          <p class="team__cap team__cap_desc">
+            Connect with customers and grow faster
+          </p>
+        </div>
+        <div class="team__info">
+          <p class="team__title">Team Inbox</p>
+          <h2 class="team__subtitle">Manage conversations</h2>
+          <p class="team__text">
+            One place to manage and respond to all conversations with leads and
+            users. Receive messages from leads.
+          </p>
+          <p class="team__review review">
+            “Great widgets. Great selection. Great design and
+            <span class="review__bold-text"> easy to implement.</span>
+            Definitely a huge time saver for a web developer!”
+          </p>
+          <div class="team__member">
+            <img class="team__photo" src="./img/rev.png" alt="" />
+            <div class="team__data">
+              <p class="team__name">Viella Malcovich</p>
+              <p class="team__position">Creative Director at Johnson</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="communicate">
+        <div class="communicate__top">
+          <div class="communicate__content">
+            <p class="communicate__title team__title">Communicate Better</p>
+            <h2 class="communicate__subtitle team__subtitle">
+              Built for busy small teams
+            </h2>
+            <p class="communicate__text team__text">
+              Three products that can be used independently or combined together
+              for your company’s needs.
+            </p>
+            <a href="#" class="button communicate__button">Get Started</a>
+          </div>
+          <div class="communicate__right-block">
+            <img class="communicate__img" src="./img/communicate.png" alt="" />
+            <p class="communicate__cap team__cap-desc">A better way to acquire new users</p>
+          </div>
+        </div>
+        <div class="communicate__info-blocks">
+          <div class="communicate__block">
+            <p class="communicate__info">
+              <span class="communicate__bold-text">Subscriptions.</span>
+              Foundation works with the tools and services you already use every
+              day.
+            </p>
+            <a href="" class="communicate__link">
+              Learn more about subscriptions</a
+            >
+          </div>
+          <div class="communicate__block">
+            <p class="communicate__info">
+              <span class="communicate__bold-text">Felxible Hours.</span> Get
+              started with our simple snippet of JavaScript or easy to install
+              SDKs for iOS and Android.
+            </p>
+            <a href="" class="communicate__link"> Get more info about hours</a>
+          </div>
+          <div class="communicate__block">
+            <p class="communicate__info">
+              <span class="communicate__bold-text">Fast Communication.</span> We
+              offer measures like 2FA and SSO to ensure the safety of your data.
+            </p>
+            <a href="" class="communicate__link">Communication guidelines</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
   </body>
 </html>
