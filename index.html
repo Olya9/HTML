@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -79,7 +81,7 @@
   </header>
 
   <main>
-    <section class="about">
+    <section class="about" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="about__info-blocks">
         <div class="about__info">
           <h2 class="about__title">What is it about?</h2>
@@ -96,19 +98,9 @@
           </p>
         </div>
       </div>
-      <!-- <div class="about__logos">
-        <ul>
-          <li><img class="logo" src="./img/hork.png" alt="" /></li>
-          <li><img class="logo" src="./img/for.png" alt="" /></li>
-          <li><img class="logo" src="" alt="" /></li>
-          <li><img class="logo" src="" alt="" /></li>
-          <li><img class="logo" src="" alt="" /></li>
-          <li><img class="logo" src="" alt="" /></li>
-        </ul>
-      </div> -->
     </section>
 
-    <section class="features">
+    <section class="features" data-aos="zoom-in">
       <img class="features__left-img" src="./img/features-left.png" alt="" />
       <div class="features__info">
         <div class="features__content">
@@ -144,7 +136,7 @@
       <img class="features__img" src="./img/features.png" alt="" />
     </section>
 
-    <section class="team">
+    <section class="team" data-aos="fade-down">
       <div class="team__image">
         <img class="team__desc-img" src="./img/team.png" alt="" />
         <img class="team__mob-img" src="./img/team-mob.png" alt="" />
@@ -177,13 +169,11 @@
       </div>
     </section>
 
-    <section class="communicate">
+    <section class="communicate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="communicate__top">
         <div class="communicate__content">
           <p class="communicate__title">Communicate Better</p>
-          <h2 class="communicate__subtitle">
-            Built for busy small teams
-          </h2>
+          <h2 class="communicate__subtitle">Built for busy small teams</h2>
           <p class="communicate__text">
             Three products that can be used independently or combined together
             for your company’s needs.
@@ -223,45 +213,53 @@
       </div>
     </section>
 
-    <section class="visitors">
+    <section class="visitors" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <p class="visitors__top-title">Engage Visitors</p>
       <h2 class="visitors__title">Understand your audience</h2>
-      <p class="visitors__text">Early stage company? Eligible applicants get all of our products for just $49 a month.
+      <p class="visitors__text">
+        Early stage company? Eligible applicants get all of our products for
+        just $49 a month.
       </p>
       <div class="visitors__buttons">
         <a class="button" href="#">Get Started</a>
         <a class="button button_white" href="#">Learn More</a>
       </div>
       <div class="visitors__images">
-        <a href="#"><img src="./img/Item1.png" alt="" class="visitors__img"></a>
-        <a href="#"><img src="./img/Item2.png" alt="" class="visitors__img"></a>
-        <a href="#"><img src="./img/Item3.png" alt="" class="visitors__img"></a>
-        <a href="#"><img src="./img/Item4.png" alt="" class="visitors__img"></a>
+        <a href="#"><img src="./img/Item1.png" alt="" class="visitors__img" /></a>
+        <a href="#"><img src="./img/Item2.png" alt="" class="visitors__img" /></a>
+        <a href="#"><img src="./img/Item3.png" alt="" class="visitors__img" /></a>
+        <a href="#"><img src="./img/Item4.png" alt="" class="visitors__img" /></a>
       </div>
     </section>
 
     <section class="mob-block">
       <p class="mob-block__title">Engage Users</p>
       <h2 class="mob-block__subtitle">Engage with your audience</h2>
-      <p class="mob-block__text">Send one-off and automated email, push, and in-app messages to people. Create better
-        stories.</p>
-      <img src="./img/mob-team.png" alt="" class="mob-block__img">
+      <p class="mob-block__text">
+        Send one-off and automated email, push, and in-app messages to people.
+        Create better stories.
+      </p>
+      <img src="./img/mob-team.png" alt="" class="mob-block__img" />
       <p class="mob-block__cap">Knowledge base and smart self-service</p>
     </section>
     <section class="mob-block">
       <p class="mob-block__title">Support</p>
       <h2 class="mob-block__subtitle">The best customer experiences</h2>
-      <p class="mob-block__text">A beautifully simple system for tracking, prioritizing, and solving customer support
-        tickets.</p>
-      <img src="./img/mob-vis.png" alt="" class="mob-block__img">
+      <p class="mob-block__text">
+        A beautifully simple system for tracking, prioritizing, and solving
+        customer support tickets.
+      </p>
+      <img src="./img/mob-vis.png" alt="" class="mob-block__img" />
       <p class="mob-block__cap">Live chat and messaging</p>
     </section>
     <section class="mob-block">
-      <img src="./img/team.png" alt="" class="mob-block__img">
+      <img src="./img/team.png" alt="" class="mob-block__img" />
       <p class="mob-block__title mob-block__title_orange">Team Inbox</p>
       <h2 class="mob-block__subtitle">Manage conversations</h2>
-      <p class="mob-block__text">One place to manage and respond to all conversations with leads and users. Receive
-        messages from leads.</p>
+      <p class="mob-block__text">
+        One place to manage and respond to all conversations with leads and
+        users. Receive messages from leads.
+      </p>
       <p class="mob-block__rev">
         “Great widgets. Great selection. Great design and
         <span class="mob-block__bold-text"> easy to implement.</span>
@@ -276,83 +274,145 @@
       </div>
     </section>
 
-    <section class="trusted">
-      <h2 class="trusted__title">Trusted by the world’s most innovative businesses – big and small</h2>
-      <p class="trusted__text">“Comprehensive set of startup tools for all imaginable entrepreneurial needs. Create
-        landing
-        pages, send emails, find freelancers. Perfect for sales, marketing, and support”</p>
-      <p class="trusted__name">Viella Malcovich</p>
-      <p class="trusted__position">Creative Director at Johnson</p>
-      <div class="trusted__slider">
-        <img src="./img/Oval.png" alt="" class="trusted__slide trusted__slide_active">
-        <img src="./img/OvalCopy3.png" alt="" class="trusted__slide">
-        <img src="./img/OvalCopy3.png" alt="" class="trusted__slide">
+    <section class="trusted" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <h2 class="trusted__title">
+        Trusted by the world’s most innovative businesses – big and small
+      </h2>
+      <a class="trusted__arrow trusted__arrow_prev" onclick="minusSlide()">&#10094;</a>
+      <div class="trusted__block">
+        <p class="trusted__text">
+          “Comprehensive set of startup tools for all imaginable
+          entrepreneurial needs. Create landing pages, send emails, find
+          freelancers. Perfect for sales, marketing, and support”
+        </p>
+        <p class="trusted__name">Viella Malcovich</p>
+        <p class="trusted__position">Creative Director at Johnson</p>
       </div>
-      <img class="trusted__img" src="./img/trusted.png" alt="">
+      <div class="trusted__block">
+        <p class="trusted__text">
+          “Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+          nam consequatur nulla, dolore blanditiis dolorum officiis laboriosam
+          error recusandae cum!”
+        </p>
+        <p class="trusted__name">Lorem, ipsum.</p>
+        <p class="trusted__position">Lorem ipsum dolor sit.</p>
+      </div>
+      <div class="trusted__block">
+        <p class="trusted__text">
+          “Consequatur nulla, dolore blanditiis dolorum officiis laboriosam
+          error recusandae cum! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Reiciendis nam.”
+        </p>
+        <p class="trusted__name">Dolor Sit</p>
+        <p class="trusted__position">Consectetur adipisicing elit</p>
+      </div>
+      <div class="trusted__slider">
+        <div class="trusted__slide" onclick="currentSlide(1)"></div>
+        <div class="trusted__slide" onclick="currentSlide(2)"></div>
+        <div class="trusted__slide" onclick="currentSlide(3)"></div>
+      </div>
+      <a class="trusted__arrow trusted__arrow_next" onclick="plusSlide()">&#10095;</a>
+      <img class="trusted__img" src="./img/trusted.png" alt="" />
     </section>
 
-    <section class="hiring">
+    <section class="hiring" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <h2 class="hiring__title">We’re hiring</h2>
-      <p class="hiring__subtitle">We’re a team of lifelong learners. We’re equal parts left and right brained.</p>
+      <p class="hiring__subtitle">
+        We’re a team of lifelong learners. We’re equal parts left and right
+        brained.
+      </p>
       <a href="#" class="hiring__button button">More about Company</a>
       <div class="hiring__blocks">
-        <div class="hiring__block">
-          <div class="hiring__block-info">
-            <h3 class="hiring__block-title">Front-End Developer</h3>
-            <p class="hiring__block-text">Los Angeles / Remote</p>
+        <div class="hiring__block-group">
+          <div class="hiring__block">
+            <div class="hiring__block-info">
+              <h3 class="hiring__block-title">Front-End Developer</h3>
+              <p class="hiring__block-text">Los Angeles / Remote</p>
+            </div>
+            <a class="hiring__block-link" href="#"><img src="./img/hir-arr.png" alt=""
+                class="hiring__block-arrow" /></a>
           </div>
-          <a class="hiring__block-link" href="#"><img src="./img/hir-arr.png" alt="" class="hiring__block-arrow"></a>
+          <p class="hiring__popup-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero
+            nobis sit, optio facere architecto ratione accusantium maxime iure
+            sequi quae tenetur sunt delectus assumenda.
+          </p>
         </div>
-        <div class="hiring__block">
-          <div class="hiring__block-info">
-            <h3 class="hiring__block-title">Community Manager</h3>
-            <p class="hiring__block-text">New York / Full-Time</p>
+        <div class="hiring__block-group">
+          <div class="hiring__block">
+            <div class="hiring__block-info">
+              <h3 class="hiring__block-title">Community Manager</h3>
+              <p class="hiring__block-text">New York / Full-Time</p>
+            </div>
+            <a class="hiring__block-link" href="#"><img src="./img/hir-arr.png" alt=""
+                class="hiring__block-arrow" /></a>
           </div>
-          <a class="hiring__block-link" href="#"><img src="./img/hir-arr.png" alt="" class="hiring__block-arrow"></a>
+          <p class="hiring__popup-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero
+            nobis sit, optio facere architecto ratione accusantium maxime iure
+            sequi quae tenetur sunt delectus assumenda.
+          </p>
         </div>
-        <div class="hiring__block">
-          <div class="hiring__block-info">
-            <h3 class="hiring__block-title">Front-End Developer</h3>
-            <p class="hiring__block-text">UX/UI Designer</p>
+
+        <div class="hiring__block-group">
+          <div class="hiring__block">
+            <div class="hiring__block-info">
+              <h3 class="hiring__block-title">Front-End Developer</h3>
+              <p class="hiring__block-text">UX/UI Designer</p>
+            </div>
+            <a class="hiring__block-link" href="#"><img src="./img/hir-arr.png" alt=""
+                class="hiring__block-arrow" /></a>
           </div>
-          <a class="hiring__block-link" href="#"><img src="./img/hir-arr.png" alt="" class="hiring__block-arrow"></a>
+          <p class="hiring__popup-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero
+            nobis sit, optio facere architecto ratione accusantium maxime iure
+            sequi quae tenetur sunt delectus assumenda.
+          </p>
         </div>
-      </div>
     </section>
 
-    <section class="start">
+    <section class="start" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="start__left">
-        <img class="start__img" src="./img/start.png" alt="">
+        <img class="start__img" src="./img/start.png" alt="" />
       </div>
       <div class="start__right">
         <h2 class="start__title">Start your free trial.</h2>
-        <p class="start__text">Get notified about company updates, news and blog posts. We hate spam.</p>
+        <p class="start__text">
+          Get notified about company updates, news and blog posts. We hate
+          spam.
+        </p>
         <form class="start__form">
-          <input class="start__input" type="text" placeholder="Enter your email"><a class="button "
-            href="#">Get Started</a>
+          <input class="start__input" type="text" placeholder="Enter your email" /><a class="button" href="#">Get
+            Started</a>
         </form>
-        <p class="start__bottom-text">Free 14-day trial · Easy setup · Cancel any time. Check out <a
-            class="start__bottom-link" href="#">Terms of Use</a>.</p>
+        <p class="start__bottom-text">
+          Free 14-day trial · Easy setup · Cancel any time. Check out
+          <a class="start__bottom-link" href="#">Terms of Use</a>.
+        </p>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" data-aos="fade-down">
     <div class="footer__main">
       <div class="footer__top">
         <div class="logo footer__logo">
           <img class="logo__img footer__img" src="./img/footer-Icon.png" alt="logo" />
           <div class="logo__desc-group">
             <p class="logo__desc-top footer__desc-top">Foundation</p>
-            <p class="logo__desc-bottom footer__logo-desc">Startup landing template</p>
+            <p class="logo__desc-bottom footer__logo-desc">
+              Startup landing template
+            </p>
           </div>
         </div>
         <p class="footer__text">
-          Foundation is a website template for startups and small teams. It helps to build a website in no time.
+          Foundation is a website template for startups and small teams. It
+          helps to build a website in no time.
         </p>
         <div class="footer__app-links">
-          <a class="footer__app-link" href="#"><img src="./img/app-store.png" alt=""></a>
-          <a class="footer__app-link" href="#"> <img src="./img/google-play.png" alt=""></a>
+          <a class="footer__app-link" href="#"><img src="./img/app-store.png" alt="" /></a>
+          <a class="footer__app-link" href="#">
+            <img src="./img/google-play.png" alt="" /></a>
         </div>
       </div>
       <div class="footer__bottom">
@@ -362,9 +422,15 @@
             <nav>
               <ul>
                 <li><a href="#" class="footer__link">Acquire Users</a></li>
-                <li><a href="#" class="footer__link">Content Marketing</a></li>
-                <li><a href="#" class="footer__link">Website Templates</a></li>
-                <li><a href="#" class="footer__link">Customer Management</a></li>
+                <li>
+                  <a href="#" class="footer__link">Content Marketing</a>
+                </li>
+                <li>
+                  <a href="#" class="footer__link">Website Templates</a>
+                </li>
+                <li>
+                  <a href="#" class="footer__link">Customer Management</a>
+                </li>
                 <li><a href="#" class="footer__link">Virtual Inbox</a></li>
               </ul>
             </nav>
@@ -386,19 +452,37 @@
     <div class="footer__bott-menu">
       <nav>
         <ul class="footer__menu footer__menu_bottom">
-          <li><a href="#" class="footer__link footer__link_bottom">Terms</a></li>
-          <li><a href="#" class="footer__link footer__link_bottom">Privacy</a></li>
-          <li><a href="#" class="footer__link footer__link_bottom">License</a></li>
+          <li>
+            <a href="#" class="footer__link footer__link_bottom">Terms</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link footer__link_bottom">Privacy</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link footer__link_bottom">License</a>
+          </li>
         </ul>
       </nav>
       <ul class="footer__social-links">
-        <li> <a href="#"><img class="footer__social-icon" src="./img/icon-twitter.png" alt="twitter"></a></li>
-        <li> <a href="#"> <img class="footer__social-icon" src="./img/icon-fb.png" alt="facebook"></a></li>
-        <li> <a href="#"> <img class="footer__social-icon" src="./img/LinkedIn.png" alt="linkedin"></a></li>
+        <li>
+          <a href="#"><img class="footer__social-icon" src="./img/icon-twitter.png" alt="twitter" /></a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="footer__social-icon" src="./img/icon-fb.png" alt="facebook" /></a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="footer__social-icon" src="./img/LinkedIn.png" alt="linkedin" /></a>
+        </li>
       </ul>
     </div>
   </footer>
-
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script src="./index.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
