@@ -15,7 +15,7 @@
     <div class="header__content">
       <div class="header__top">
         <div class="header__logo logo">
-          <img class="logo__img" src="./img/icon.png" alt="logo" />
+          <img class="logo__img" src="./img/Icon.png" alt="logo" />
           <div class="logo__desc-group">
             <p class="logo__desc-top">Foundation</p>
             <p class="logo__desc-bottom">Startup landing template</p>
@@ -61,7 +61,7 @@
               </div>
             </li>
             <li class="menu__button">
-              <a href="#" class="button">Get Started</a>
+              <a href="#start-form" class="button">Get Started</a>
             </li>
           </ul>
         </nav>
@@ -73,15 +73,16 @@
           on their behaviors.
         </p>
         <div class="header__buttons">
-          <a href="#" class="button header__top-button">Get Started</a>
+          <a href="#start-form" class="button header__top-button">Get Started</a>
           <a href="#" class="button button_white">Learn More</a>
         </div>
+        <img class="header__img" src="./img/header-main.png" alt="">
       </div>
     </div>
   </header>
 
   <main>
-    <section class="about" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <section class="about">
       <div class="about__info-blocks">
         <div class="about__info">
           <h2 class="about__title">What is it about?</h2>
@@ -100,8 +101,8 @@
       </div>
     </section>
 
-    <section class="features" data-aos="zoom-in">
-      <img class="features__left-img" src="./img/features-left.png" alt="" />
+    <section class="features">
+      <img class="features__left-img" data-aos="zoom-in" src="./img/features-left.png" alt="" />
       <div class="features__info">
         <div class="features__content">
           <h2 class="features__title features__title-desc">Features</h2>
@@ -133,12 +134,12 @@
           </div>
         </div>
       </div>
-      <img class="features__img" src="./img/features.png" alt="" />
+      <img class="features__img" data-aos="zoom-in" src="./img/features.png" alt="" />
     </section>
 
-    <section class="team" data-aos="fade-down">
+    <section class="team">
       <div class="team__image">
-        <img class="team__desc-img" src="./img/team.png" alt="" />
+        <img class="team__desc-img" src="./img/team.png" alt="" data-aos="flip-left" />
         <img class="team__mob-img" src="./img/team-mob.png" alt="" />
         <p class="team__cap team__cap_mob">
           A better way to acquire new users
@@ -154,11 +155,11 @@
           One place to manage and respond to all conversations with leads and
           users. Receive messages from leads.
         </p>
-        <p class="team__review review">
+        <blockquote class="team__review review">
           “Great widgets. Great selection. Great design and
           <span class="review__bold-text"> easy to implement.</span>
           Definitely a huge time saver for a web developer!”
-        </p>
+        </blockquote>
         <div class="team__member">
           <img class="team__photo" src="./img/rev.png" alt="" />
           <div class="team__data">
@@ -169,7 +170,7 @@
       </div>
     </section>
 
-    <section class="communicate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <section class="communicate">
       <div class="communicate__top">
         <div class="communicate__content">
           <p class="communicate__title">Communicate Better</p>
@@ -178,10 +179,10 @@
             Three products that can be used independently or combined together
             for your company’s needs.
           </p>
-          <a href="#" class="button communicate__button">Get Started</a>
+          <a href="#start-form" class="button communicate__button">Get Started</a>
         </div>
         <div class="communicate__right-block">
-          <img class="communicate__img" src="./img/communicate.png" alt="" />
+          <img class="communicate__img" data-aos="flip-down" src="./img/communicate.png" alt="" />
           <p class="communicate__cap">A better way to acquire new users</p>
         </div>
       </div>
@@ -221,14 +222,26 @@
         just $49 a month.
       </p>
       <div class="visitors__buttons">
-        <a class="button" href="#">Get Started</a>
+        <a class="button" href="#start-form">Get Started</a>
         <a class="button button_white" href="#">Learn More</a>
       </div>
       <div class="visitors__images">
-        <a href="#"><img src="./img/Item1.png" alt="" class="visitors__img" /></a>
-        <a href="#"><img src="./img/Item2.png" alt="" class="visitors__img" /></a>
-        <a href="#"><img src="./img/Item3.png" alt="" class="visitors__img" /></a>
-        <a href="#"><img src="./img/Item4.png" alt="" class="visitors__img" /></a>
+        <a href="#" class="visitors__card">
+          <img src="./img/face-icon.png" alt="" class="visitors__img" />
+          <p class="visitors__card-text">Developers</p>
+        </a>
+        <a href="#" class="visitors__card">
+          <img src="./img/lamp.png" alt="" class="visitors__img" />
+          <p class="visitors__card-text">Entertainment</p>
+        </a>
+        <a href="#" class="visitors__card">
+          <img src="./img/run-icon.png" alt="" class="visitors__img" />
+          <p class="visitors__card-text">Athletes</p>
+        </a>
+        <a href="#" class="visitors__card">
+          <img src="./img/tv-icon.png" alt="" class="visitors__img" />
+          <p class="visitors__card-text">Creators</p>
+        </a>
       </div>
     </section>
 
@@ -278,40 +291,42 @@
       <h2 class="trusted__title">
         Trusted by the world’s most innovative businesses – big and small
       </h2>
-      <a class="trusted__arrow trusted__arrow_prev" onclick="minusSlide()">&#10094;</a>
-      <div class="trusted__block">
-        <p class="trusted__text">
-          “Comprehensive set of startup tools for all imaginable
-          entrepreneurial needs. Create landing pages, send emails, find
-          freelancers. Perfect for sales, marketing, and support”
-        </p>
-        <p class="trusted__name">Viella Malcovich</p>
-        <p class="trusted__position">Creative Director at Johnson</p>
+      <div class="slider">
+        <div class="slider__block ">
+          <blockquote class="slider__text">
+            “Comprehensive set of startup tools for all imaginable
+            entrepreneurial needs. Create landing pages, send emails, find
+            freelancers. Perfect for sales, marketing, and support”
+          </blockquote>
+          <p class="slider__name">Viella Malcovich</p>
+          <p class="slider__position">Creative Director at Johnson</p>
+        </div>
+        <div class="slider__block">
+          <blockquote class="slider__text">
+            “Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            nam consequatur nulla, dolore blanditiis dolorum officiis laboriosam
+            error recusandae cum!”
+          </blockquote>
+          <p class="slider__name">Lorem, ipsum.</p>
+          <p class="slider__position">Lorem ipsum dolor sit.</p>
+        </div>
+        <div class="slider__block">
+          <blockquote class="slider__text">
+            “Consequatur nulla, dolore blanditiis dolorum officiis laboriosam
+            error recusandae cum! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Reiciendis nam.”
+          </blockquote>
+          <p class="slider__name">Dolor Sit</p>
+          <p class="slider__position">Consectetur adipisicing elit</p>
+        </div>
+        <div class="slider__buttons">
+          <a class="slider__arrow slider__arrow_prev" onclick="minusSlide()">&#10094;</a>
+          <div class="slider__btn" onclick="currentSlide(1)"></div>
+          <div class="slider__btn" onclick="currentSlide(2)"></div>
+          <div class="slider__btn" onclick="currentSlide(3)"></div>
+          <a class="slider__arrow slider__arrow_next" onclick="plusSlide()">&#10095;</a>
+        </div>
       </div>
-      <div class="trusted__block">
-        <p class="trusted__text">
-          “Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          nam consequatur nulla, dolore blanditiis dolorum officiis laboriosam
-          error recusandae cum!”
-        </p>
-        <p class="trusted__name">Lorem, ipsum.</p>
-        <p class="trusted__position">Lorem ipsum dolor sit.</p>
-      </div>
-      <div class="trusted__block">
-        <p class="trusted__text">
-          “Consequatur nulla, dolore blanditiis dolorum officiis laboriosam
-          error recusandae cum! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Reiciendis nam.”
-        </p>
-        <p class="trusted__name">Dolor Sit</p>
-        <p class="trusted__position">Consectetur adipisicing elit</p>
-      </div>
-      <div class="trusted__slider">
-        <div class="trusted__slide" onclick="currentSlide(1)"></div>
-        <div class="trusted__slide" onclick="currentSlide(2)"></div>
-        <div class="trusted__slide" onclick="currentSlide(3)"></div>
-      </div>
-      <a class="trusted__arrow trusted__arrow_next" onclick="plusSlide()">&#10095;</a>
       <img class="trusted__img" src="./img/trusted.png" alt="" />
     </section>
 
@@ -323,57 +338,54 @@
       </p>
       <a href="#" class="hiring__button button">More about Company</a>
       <div class="hiring__blocks">
-        <div class="hiring__block-group">
+        <div class="hiring__block-group hiring__block-group_front">
           <div class="hiring__block">
             <div class="hiring__block-info">
               <h3 class="hiring__block-title">Front-End Developer</h3>
               <p class="hiring__block-text">Los Angeles / Remote</p>
             </div>
-            <a class="hiring__block-link" href="#"><img src="./img/hir-arr.png" alt=""
-                class="hiring__block-arrow" /></a>
+            <img class="hiring__block-link" src="./img/hir-arr.png" alt="" />
           </div>
-          <p class="hiring__popup-text">
+          <p class="hiring__popup-text hiring__popup-text_front">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero
             nobis sit, optio facere architecto ratione accusantium maxime iure
             sequi quae tenetur sunt delectus assumenda.
           </p>
         </div>
-        <div class="hiring__block-group">
+        <div class="hiring__block-group hiring__block-group_community">
           <div class="hiring__block">
             <div class="hiring__block-info">
               <h3 class="hiring__block-title">Community Manager</h3>
               <p class="hiring__block-text">New York / Full-Time</p>
             </div>
-            <a class="hiring__block-link" href="#"><img src="./img/hir-arr.png" alt=""
-                class="hiring__block-arrow" /></a>
+            <img class="hiring__block-link" src="./img/hir-arr.png" alt="" />
           </div>
-          <p class="hiring__popup-text">
+          <p class="hiring__popup-text hiring__popup-text_community">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero
             nobis sit, optio facere architecto ratione accusantium maxime iure
             sequi quae tenetur sunt delectus assumenda.
           </p>
         </div>
-
-        <div class="hiring__block-group">
+        <div class="hiring__block-group hiring__block-group_designer">
           <div class="hiring__block">
             <div class="hiring__block-info">
-              <h3 class="hiring__block-title">Front-End Developer</h3>
+              <h3 class="hiring__block-title">Designer</h3>
               <p class="hiring__block-text">UX/UI Designer</p>
             </div>
-            <a class="hiring__block-link" href="#"><img src="./img/hir-arr.png" alt=""
-                class="hiring__block-arrow" /></a>
+            <img class="hiring__block-link" src="./img/hir-arr.png" alt="" />
           </div>
-          <p class="hiring__popup-text">
+          <p class="hiring__popup-text hiring__popup-text_designer">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero
             nobis sit, optio facere architecto ratione accusantium maxime iure
             sequi quae tenetur sunt delectus assumenda.
           </p>
         </div>
+      </div>
     </section>
 
-    <section class="start" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <section id="start-form" class="start" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="start__left">
-        <img class="start__img" src="./img/start.png" alt="" />
+        <img class="start__img" src="./img/start.png" alt="" data-aos="flip-left" />
       </div>
       <div class="start__right">
         <h2 class="start__title">Start your free trial.</h2>
@@ -481,7 +493,14 @@
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script src="./index.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      offset: 150,
+      duration: 1000,
+      easing: 'ease-in-quad',
+      delay: 0,
+      disable: 'mobile',
+      once: true,
+    });
   </script>
 </body>
 
