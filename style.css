@@ -21,12 +21,13 @@ html {
   padding: 46px 100px 77px;
   background-color: #f3c6bd;
   height: 100vh;
+  overflow: hidden;
 }
 .burger {
   display: none;
 }
 .burger__line {
-  width: 18px;
+  width: 32px;
   height: 2px;
   background-color: #2c3241;
   display: block;
@@ -64,13 +65,11 @@ html {
 .logo {
   min-width: 300px;
 }
-
 .logo__desc-group {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-
 .logo__desc-top {
   font-size: 18px;
   line-height: 25px;
@@ -109,7 +108,7 @@ html {
   min-width: 160px;
 }
 .button:hover {
-  text-decoration: underline;
+  background-color: #009b4d;
 }
 .button_white {
   color: #3040c4;
@@ -166,8 +165,11 @@ html {
   position: absolute;
   top: 70px;
   right: 4%;
-  display: none;
   z-index: 10;
+  display: none;
+}
+.popup__menu_active {
+  display: flex;
 }
 .popup__menu::after {
   content: '';
@@ -177,10 +179,6 @@ html {
   border: 20px solid transparent;
   border-bottom: 20px solid white;
 }
-.popup_active {
-  display: flex;
-}
-
 .popup__item {
   width: 263px;
 }
@@ -200,14 +198,26 @@ html {
   font-weight: 400;
 }
 @media (max-width: 1070px) {
-  .menu {
+  .menu__link {
+    display: none;
+  }
+  .menu__button {
     display: none;
   }
   .burger {
     display: block;
+    cursor: pointer;
   }
   .header__img {
     max-height: 300px;
+  }
+  .popup__menu {
+    top: 50px;
+    left: -495px;
+    display: none;
+  }
+  .popup__menu_active {
+    display: flex;
   }
 }
 @media (max-width: 768px) {
@@ -236,7 +246,7 @@ html {
   }
   .header__main {
     background-color: #f3c6bd;
-    padding: 0 2% 50px;
+    padding: 20px 2% 90px;
   }
   .header__title {
     margin-bottom: 24px;
@@ -254,6 +264,21 @@ html {
   }
   .button {
     text-align: center;
+  }
+  .popup__menu {
+    max-width: 310px;
+    left: 100px;
+    top: 0;
+    display: flex;
+    opacity: 0;
+    transition: left 1000ms, ease-out 0.5s;
+  }
+  .popup__menu::after {
+    display: none;
+  }
+  .popup__menu_active {
+    left: -250px;
+    opacity: 1;
   }
 }
 @media (max-width: 600px) {
@@ -380,7 +405,10 @@ html {
   color: #2b292d;
   position: relative;
   margin-bottom: 20px;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s, linear 0.5s;
+  height: 0;
 }
 .features__bottom-text::after {
   content: '';
@@ -405,6 +433,11 @@ html {
 }
 .features__icon {
   margin-right: 15px;
+}
+.features_active {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
 }
 @media (max-width: 768px) {
   .features {
@@ -616,6 +649,9 @@ html {
   font-weight: 700;
   text-decoration: underline;
   color: #3040c4;
+}
+.communicate__link:hover {
+  text-decoration: none;
 }
 .communicate__bold-text {
   font-weight: 700;
@@ -965,7 +1001,10 @@ html {
   font-size: 20px;
   line-height: 34px;
   text-align: center;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s, ease-out 0.5s;
+  height: 0;
 }
 .hiring__block {
   display: flex;
@@ -973,6 +1012,7 @@ html {
   justify-content: space-between;
   padding-left: 20px;
   margin: 0 auto 15px;
+  cursor: pointer;
 }
 .hiring__block:last-child {
   margin-bottom: 0;
@@ -985,10 +1025,15 @@ html {
   min-width: 230px;
 }
 .hiring__block-link {
-  padding: 40px 21px;
+  padding: 21px;
   background-color: #d5d4d5;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  font-weight: bold;
+  color: rgba(43, 41, 45, 0.6);
+  font-size: 25px;
+  transform: rotate(90deg);
+  transition: transform 0.5s;
 }
 .hiring__block-text {
   font-size: 16px;
@@ -1001,11 +1046,13 @@ html {
 .hiring__button {
   margin-bottom: 50px;
 }
-.hiring__arrow_active {
-  transform: rotate(50deg);
+.hiring__block-link_active {
+  transform: rotate(-90deg);
 }
-.hiring__block-group {
-  cursor: pointer;
+.hiring__popup-text_active {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
 }
 @media (min-width: 768px) {
   .hiring {
@@ -1037,13 +1084,18 @@ html {
     margin-bottom: 0;
   }
   .hiring__block:hover {
-    background-color: #3141c5;
-    cursor: pointer;
+    background-color: #0e70c5;
+  }
+  .hiring__block_active {
+    background-color: #0e70c5;
   }
   .hiring__block:hover .hiring__block-title {
     color: white;
   }
   .hiring__block:hover .hiring__block-text {
+    color: white;
+  }
+  .hiring__block:hover .hiring__block-link {
     color: white;
   }
   .hiring__block-text {
@@ -1052,7 +1104,7 @@ html {
   }
   .hiring__block-link {
     background-color: inherit;
-    padding: 30px 0;
+    padding: 30px 21px;
   }
   .hiring__block-info {
     display: flex;
@@ -1209,7 +1261,7 @@ html {
   display: flex;
 }
 .footer__social-icon {
-  margin-right: 20px;
+  margin-right: 22px;
 }
 .footer__menu_bottom {
   display: flex;
@@ -1278,6 +1330,5 @@ html {
     justify-content: space-between;
   }
 }
-.active {
-  display: block;
-}
+
+
