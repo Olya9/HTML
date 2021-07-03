@@ -1,507 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css" />
-</head>
-
-<body class="page">
-  <header class="header">
-    <div class="header__content">
-      <div class="header__top">
-        <div class="header__logo logo">
-          <img class="logo__img" src="./img/Icon.png" alt="logo" />
-          <div class="logo__desc-group">
-            <p class="logo__desc-top">Foundation</p>
-            <p class="logo__desc-bottom">Startup landing template</p>
+  <body class="page">
+    <header class="header">
+      <div class="header__content">
+        <div class="header__top">
+          <div class="header__logo logo">
+            <img class="logo__img" src="./img/Icon.png" alt="logo" />
+            <div class="logo__desc-group">
+              <p class="logo__desc-top">Foundation</p>
+              <p class="logo__desc-bottom">Startup landing template</p>
+            </div>
           </div>
+          <nav>
+            <div class="burger">
+              <span class="burger__line"></span
+              ><span class="burger__line"></span>
+              <span class="burger__line"></span
+              ><span class="burger__line"></span>
+            </div>
+            <ul class="menu">
+              <li><a href="#" class="menu__link menu__link_bold">Home</a></li>
+              <li><a href="#" class="menu__link">Stories</a></li>
+              <li class="popup">
+                <a href="#" class="menu__link menu__library"
+                  >Library
+                  <img class="menu__arrow" src="./img/Arrow.png" alt=""
+                /></a>
+                <div class="popup__menu">
+                  <a href="#" class="menu__popup-link menu__link_bold">Home</a>
+                  <a href="#" class="menu__popup-link">Stories</a>
+                  <div class="popup__item">
+                    <h2 class="popup__title">Acquire Users</h2>
+                    <p class="popup__text">
+                      Work with the tools and services you use.
+                    </p>
+                  </div>
+                  <div class="popup__item">
+                    <h2 class="popup__title">Engage Customers</h2>
+                    <p class="popup__text">
+                      Get started with our simple snippet of JavaScript.
+                    </p>
+                  </div>
+                  <div class="popup__item">
+                    <h2 class="popup__title">Book Appointments</h2>
+                    <p class="popup__text">
+                      We offer measures like 2FA to ensure the safety.
+                    </p>
+                  </div>
+                  <div class="popup__item">
+                    <h2 class="popup__title">Generate Leads</h2>
+                    <p class="popup__text">
+                      Generate Leads Become a better designer by learning this
+                      courses.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__button">
+                <a href="#start-form" class="button">Get Started</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav>
-          <div class="burger">
-            <span class="burger__line"></span><span class="burger__line"></span>
-            <span class="burger__line"></span><span class="burger__line"></span>
+        <div class="header__main">
+          <h1 class="header__title">Build stunning websites & apps.</h1>
+          <p class="header__info">
+            Create live segments and target the right people for messages based
+            on their behaviors.
+          </p>
+          <div class="header__buttons">
+            <a href="#start-form" class="button header__top-button"
+              >Get Started</a
+            >
+            <a href="#" class="button button_white">Learn More</a>
           </div>
-          <ul class="menu">
-            <li><a href="#" class="menu__link menu__link_bold">Home</a></li>
-            <li><a href="#" class="menu__link">Stories</a></li>
-            <li class="popup">
-              <a href="#" class="menu__link">Library
-                <img class="menu__arrow" src="./img/Arrow.png" alt="" /></a>
-              <div class="popup__menu">
-                <div class="popup__item">
-                  <h2 class="popup__title">Acquire Users</h2>
-                  <p class="popup__text">
-                    Work with the tools and services you use.
-                  </p>
-                </div>
-                <div class="popup__item">
-                  <h2 class="popup__title">Engage Customers</h2>
-                  <p class="popup__text">
-                    Get started with our simple snippet of JavaScript.
-                  </p>
-                </div>
-                <div class="popup__item">
-                  <h2 class="popup__title">Book Appointments</h2>
-                  <p class="popup__text">
-                    We offer measures like 2FA to ensure the safety.
-                  </p>
-                </div>
-                <div class="popup__item">
-                  <h2 class="popup__title">Generate Leads</h2>
-                  <p class="popup__text">
-                    Generate Leads Become a better designer by learning this
-                    courses.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="menu__button">
-              <a href="#start-form" class="button">Get Started</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__main">
-        <h1 class="header__title">Build stunning websites & apps.</h1>
-        <p class="header__info">
-          Create live segments and target the right people for messages based
-          on their behaviors.
-        </p>
-        <div class="header__buttons">
-          <a href="#start-form" class="button header__top-button">Get Started</a>
-          <a href="#" class="button button_white">Learn More</a>
+          <img class="header__img" src="./img/header-main.png" alt="" />
         </div>
-        <img class="header__img" src="./img/header-main.png" alt="">
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="about">
-      <div class="about__info-blocks">
-        <div class="about__info">
-          <h2 class="about__title">What is it about?</h2>
-          <p class="about__text">
-            Building a website for a startup that looks amazing is not a
-            rocket science anymore.
-          </p>
-        </div>
-        <div class="about__info">
-          <h2 class="about__title">Who is it for?</h2>
-          <p class="about__text">
-            Startups, small companies and teams, entrepreneurs and web
-            developers.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="features">
-      <img class="features__left-img" data-aos="zoom-in" src="./img/features-left.png" alt="" />
-      <div class="features__info">
-        <div class="features__content">
-          <h2 class="features__title features__title-desc">Features</h2>
-          <h2 class="features__title features__title-mob">
-            Acquire Customers
-          </h2>
-          <h3 class="features__subtitle">Easily find leads and customers</h3>
-          <p class="features__text">
-            Send one-off and automated email, push, and in-app messages to
-            people. Create better stories.
-          </p>
-          <div class="features__desc">
-            <h4 class="features__bottom-title">
-              <img class="features__title-img" src="./img/features-icon.png" alt="" />
-              Acquire new customers
-            </h4>
-            <p class="features__bottom-text">
-              Everything you need to start building – including open-source
-              code, documentation.
+    <main>
+      <section class="about">
+        <div class="about__info-blocks">
+          <div class="about__info">
+            <h2 class="about__title">What is it about?</h2>
+            <p class="about__text">
+              Building a website for a startup that looks amazing is not a
+              rocket science anymore.
             </p>
-            <div class="features__users">
-              <img class="features__icon" src="./img/Icon-darc.png" alt="" />
-              <p class="features__users-text">Engage users</p>
-            </div>
-            <div class="features__users">
-              <img class="features__icon" src="./img/Icon-darc2.png" alt="" />
-              <p class="features__users-text">Develop across platforms</p>
+          </div>
+          <div class="about__info">
+            <h2 class="about__title">Who is it for?</h2>
+            <p class="about__text">
+              Startups, small companies and teams, entrepreneurs and web
+              developers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <img
+          class="features__left-img"
+          data-aos="zoom-in"
+          src="./img/features-left.png"
+          alt=""
+        />
+        <div class="features__info">
+          <div class="features__content">
+            <h2 class="features__title features__title-desc">Features</h2>
+            <h2 class="features__title features__title-mob">
+              Acquire Customers
+            </h2>
+            <h3 class="features__subtitle">Easily find leads and customers</h3>
+            <p class="features__text">
+              Send one-off and automated email, push, and in-app messages to
+              people. Create better stories.
+            </p>
+            <div class="features__desc">
+              <h4 class="features__bottom-title">
+                <img
+                  class="features__title-img"
+                  src="./img/features-icon.png"
+                  alt=""
+                />
+                <a href="#" class="features__bottom-link"
+                  >Acquire new customers</a
+                >
+              </h4>
+              <p class="features__bottom-text">
+                Everything you need to start building – including open-source
+                code, documentation.
+              </p>
+              <div class="features__users">
+                <img class="features__icon" src="./img/Icon-darc.png" alt="" />
+                <p class="features__users-text">Engage users</p>
+              </div>
+              <div class="features__users">
+                <img class="features__icon" src="./img/Icon-darc2.png" alt="" />
+                <p class="features__users-text">Develop across platforms</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <img class="features__img" data-aos="zoom-in" src="./img/features.png" alt="" />
-    </section>
+        <img
+          class="features__img"
+          data-aos="zoom-in"
+          src="./img/features.png"
+          alt=""
+        />
+      </section>
 
-    <section class="team">
-      <div class="team__image">
-        <img class="team__desc-img" src="./img/team.png" alt="" data-aos="flip-left" />
-        <img class="team__mob-img" src="./img/team-mob.png" alt="" />
-        <p class="team__cap team__cap_mob">
-          A better way to acquire new users
+      <section class="team">
+        <div class="team__image">
+          <img
+            class="team__desc-img"
+            src="./img/team.png"
+            alt=""
+            data-aos="flip-left"
+          />
+          <img class="team__mob-img" src="./img/team-mob.png" alt="" />
+          <p class="team__cap team__cap_mob">
+            A better way to acquire new users
+          </p>
+          <p class="team__cap team__cap_desc">
+            Connect with customers and grow faster
+          </p>
+        </div>
+        <div class="team__info">
+          <p class="team__title">Team Inbox</p>
+          <h2 class="team__subtitle">Manage conversations</h2>
+          <p class="team__text">
+            One place to manage and respond to all conversations with leads and
+            users. Receive messages from leads.
+          </p>
+          <blockquote class="team__review review">
+            “Great widgets. Great selection. Great design and
+            <span class="review__bold-text"> easy to implement.</span>
+            Definitely a huge time saver for a web developer!”
+          </blockquote>
+          <div class="team__member">
+            <img class="team__photo" src="./img/rev.png" alt="" />
+            <div class="team__data">
+              <p class="team__name">Viella Malcovich</p>
+              <p class="team__position">Creative Director at Johnson</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="communicate">
+        <div class="communicate__top">
+          <div class="communicate__content">
+            <p class="communicate__title">Communicate Better</p>
+            <h2 class="communicate__subtitle">Built for busy small teams</h2>
+            <p class="communicate__text">
+              Three products that can be used independently or combined together
+              for your company’s needs.
+            </p>
+            <a href="#start-form" class="button communicate__button"
+              >Get Started</a
+            >
+          </div>
+          <div class="communicate__right-block">
+            <img
+              class="communicate__img"
+              data-aos="flip-down"
+              src="./img/communicate.png"
+              alt=""
+            />
+            <p class="communicate__cap">A better way to acquire new users</p>
+          </div>
+        </div>
+        <div class="communicate__info-blocks">
+          <div class="communicate__block">
+            <p class="communicate__info">
+              <span class="communicate__bold-text">Subscriptions.</span>
+              Foundation works with the tools and services you already use every
+              day.
+            </p>
+            <a href="" class="communicate__link">
+              Learn more about subscriptions</a
+            >
+          </div>
+          <div class="communicate__block">
+            <p class="communicate__info">
+              <span class="communicate__bold-text">Felxible Hours.</span> Get
+              started with our simple snippet of JavaScript or easy to install
+              SDKs for iOS and Android.
+            </p>
+            <a href="#" class="communicate__link"> Get more info about hours</a>
+          </div>
+          <div class="communicate__block">
+            <p class="communicate__info">
+              <span class="communicate__bold-text">Fast Communication.</span> We
+              offer measures like 2FA and SSO to ensure the safety of your data.
+            </p>
+            <a href="#" class="communicate__link">Communication guidelines</a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="visitors"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        <p class="visitors__top-title">Engage Visitors</p>
+        <h2 class="visitors__title">Understand your audience</h2>
+        <p class="visitors__text">
+          Early stage company? Eligible applicants get all of our products for
+          just $49 a month.
         </p>
-        <p class="team__cap team__cap_desc">
-          Connect with customers and grow faster
+        <div class="visitors__buttons">
+          <a class="button" href="#start-form">Get Started</a>
+          <a class="button button_white" href="#">Learn More</a>
+        </div>
+        <div class="visitors__images">
+          <a href="#" class="visitors__card">
+            <img src="./img/face-icon.png" alt="" class="visitors__img" />
+            <p class="visitors__card-text">Developers</p>
+          </a>
+          <a href="#" class="visitors__card">
+            <img src="./img/lamp.png" alt="" class="visitors__img" />
+            <p class="visitors__card-text">Entertainment</p>
+          </a>
+          <a href="#" class="visitors__card">
+            <img src="./img/run-icon.png" alt="" class="visitors__img" />
+            <p class="visitors__card-text">Athletes</p>
+          </a>
+          <a href="#" class="visitors__card">
+            <img src="./img/tv-icon.png" alt="" class="visitors__img" />
+            <p class="visitors__card-text">Creators</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="mob-block">
+        <p class="mob-block__title">Engage Users</p>
+        <h2 class="mob-block__subtitle">Engage with your audience</h2>
+        <p class="mob-block__text">
+          Send one-off and automated email, push, and in-app messages to people.
+          Create better stories.
         </p>
-      </div>
-      <div class="team__info">
-        <p class="team__title">Team Inbox</p>
-        <h2 class="team__subtitle">Manage conversations</h2>
-        <p class="team__text">
+        <img src="./img/mob-team.png" alt="" class="mob-block__img" />
+        <p class="mob-block__cap">Knowledge base and smart self-service</p>
+      </section>
+      <section class="mob-block">
+        <p class="mob-block__title">Support</p>
+        <h2 class="mob-block__subtitle">The best customer experiences</h2>
+        <p class="mob-block__text">
+          A beautifully simple system for tracking, prioritizing, and solving
+          customer support tickets.
+        </p>
+        <img src="./img/mob-vis.png" alt="" class="mob-block__img" />
+        <p class="mob-block__cap">Live chat and messaging</p>
+      </section>
+      <section class="mob-block">
+        <img src="./img/team.png" alt="" class="mob-block__img" />
+        <p class="mob-block__title mob-block__title_orange">Team Inbox</p>
+        <h2 class="mob-block__subtitle">Manage conversations</h2>
+        <p class="mob-block__text">
           One place to manage and respond to all conversations with leads and
           users. Receive messages from leads.
         </p>
-        <blockquote class="team__review review">
+        <p class="mob-block__rev">
           “Great widgets. Great selection. Great design and
-          <span class="review__bold-text"> easy to implement.</span>
+          <span class="mob-block__bold-text"> easy to implement.</span>
           Definitely a huge time saver for a web developer!”
-        </blockquote>
-        <div class="team__member">
-          <img class="team__photo" src="./img/rev.png" alt="" />
-          <div class="team__data">
-            <p class="team__name">Viella Malcovich</p>
-            <p class="team__position">Creative Director at Johnson</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="communicate">
-      <div class="communicate__top">
-        <div class="communicate__content">
-          <p class="communicate__title">Communicate Better</p>
-          <h2 class="communicate__subtitle">Built for busy small teams</h2>
-          <p class="communicate__text">
-            Three products that can be used independently or combined together
-            for your company’s needs.
-          </p>
-          <a href="#start-form" class="button communicate__button">Get Started</a>
-        </div>
-        <div class="communicate__right-block">
-          <img class="communicate__img" data-aos="flip-down" src="./img/communicate.png" alt="" />
-          <p class="communicate__cap">A better way to acquire new users</p>
-        </div>
-      </div>
-      <div class="communicate__info-blocks">
-        <div class="communicate__block">
-          <p class="communicate__info">
-            <span class="communicate__bold-text">Subscriptions.</span>
-            Foundation works with the tools and services you already use every
-            day.
-          </p>
-          <a href="" class="communicate__link">
-            Learn more about subscriptions</a>
-        </div>
-        <div class="communicate__block">
-          <p class="communicate__info">
-            <span class="communicate__bold-text">Felxible Hours.</span> Get
-            started with our simple snippet of JavaScript or easy to install
-            SDKs for iOS and Android.
-          </p>
-          <a href="#" class="communicate__link"> Get more info about hours</a>
-        </div>
-        <div class="communicate__block">
-          <p class="communicate__info">
-            <span class="communicate__bold-text">Fast Communication.</span> We
-            offer measures like 2FA and SSO to ensure the safety of your data.
-          </p>
-          <a href="#" class="communicate__link">Communication guidelines</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="visitors" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <p class="visitors__top-title">Engage Visitors</p>
-      <h2 class="visitors__title">Understand your audience</h2>
-      <p class="visitors__text">
-        Early stage company? Eligible applicants get all of our products for
-        just $49 a month.
-      </p>
-      <div class="visitors__buttons">
-        <a class="button" href="#start-form">Get Started</a>
-        <a class="button button_white" href="#">Learn More</a>
-      </div>
-      <div class="visitors__images">
-        <a href="#" class="visitors__card">
-          <img src="./img/face-icon.png" alt="" class="visitors__img" />
-          <p class="visitors__card-text">Developers</p>
-        </a>
-        <a href="#" class="visitors__card">
-          <img src="./img/lamp.png" alt="" class="visitors__img" />
-          <p class="visitors__card-text">Entertainment</p>
-        </a>
-        <a href="#" class="visitors__card">
-          <img src="./img/run-icon.png" alt="" class="visitors__img" />
-          <p class="visitors__card-text">Athletes</p>
-        </a>
-        <a href="#" class="visitors__card">
-          <img src="./img/tv-icon.png" alt="" class="visitors__img" />
-          <p class="visitors__card-text">Creators</p>
-        </a>
-      </div>
-    </section>
-
-    <section class="mob-block">
-      <p class="mob-block__title">Engage Users</p>
-      <h2 class="mob-block__subtitle">Engage with your audience</h2>
-      <p class="mob-block__text">
-        Send one-off and automated email, push, and in-app messages to people.
-        Create better stories.
-      </p>
-      <img src="./img/mob-team.png" alt="" class="mob-block__img" />
-      <p class="mob-block__cap">Knowledge base and smart self-service</p>
-    </section>
-    <section class="mob-block">
-      <p class="mob-block__title">Support</p>
-      <h2 class="mob-block__subtitle">The best customer experiences</h2>
-      <p class="mob-block__text">
-        A beautifully simple system for tracking, prioritizing, and solving
-        customer support tickets.
-      </p>
-      <img src="./img/mob-vis.png" alt="" class="mob-block__img" />
-      <p class="mob-block__cap">Live chat and messaging</p>
-    </section>
-    <section class="mob-block">
-      <img src="./img/team.png" alt="" class="mob-block__img" />
-      <p class="mob-block__title mob-block__title_orange">Team Inbox</p>
-      <h2 class="mob-block__subtitle">Manage conversations</h2>
-      <p class="mob-block__text">
-        One place to manage and respond to all conversations with leads and
-        users. Receive messages from leads.
-      </p>
-      <p class="mob-block__rev">
-        “Great widgets. Great selection. Great design and
-        <span class="mob-block__bold-text"> easy to implement.</span>
-        Definitely a huge time saver for a web developer!”
-      </p>
-      <div class="mob-block__member">
-        <img class="mob-block__photo" src="./img/rev.png" alt="" />
-        <div class="mob-block__data">
-          <p class="mob-block__name">Viella Malcovich</p>
-          <p class="mob-block__position">Creative Director at Johnson</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="trusted" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <h2 class="trusted__title">
-        Trusted by the world’s most innovative businesses – big and small
-      </h2>
-      <div class="slider">
-        <div class="slider__block ">
-          <blockquote class="slider__text">
-            “Comprehensive set of startup tools for all imaginable
-            entrepreneurial needs. Create landing pages, send emails, find
-            freelancers. Perfect for sales, marketing, and support!”
-          </blockquote>
-          <p class="slider__name">Viella Malcovich</p>
-          <p class="slider__position">Creative Director at Johnson</p>
-        </div>
-        <div class="slider__block">
-          <blockquote class="slider__text">
-            “Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            nam consequatur nulla, dolore blanditiis dolorum officiis laboriosam
-            error recusandae cum!”
-          </blockquote>
-          <p class="slider__name">Lorem, ipsum.</p>
-          <p class="slider__position">Lorem ipsum dolor sit.</p>
-        </div>
-        <div class="slider__block">
-          <blockquote class="slider__text">
-            “Consequatur nulla, dolore blanditiis dolorum officiis laboriosam
-            error recusandae cum! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Reiciendis nam.”
-          </blockquote>
-          <p class="slider__name">Dolor Sit</p>
-          <p class="slider__position">Consectetur adipisicing elit</p>
-        </div>
-        <div class="slider__buttons">
-          <a class="slider__arrow slider__arrow_prev" onclick="minusSlide()">&#10094;</a>
-          <div class="slider__btn" onclick="currentSlide(1)"></div>
-          <div class="slider__btn" onclick="currentSlide(2)"></div>
-          <div class="slider__btn" onclick="currentSlide(3)"></div>
-          <a class="slider__arrow slider__arrow_next" onclick="plusSlide()">&#10095;</a>
-        </div>
-      </div>
-      <img class="trusted__img" src="./img/trusted.png" alt="" />
-    </section>
-
-    <section class="hiring" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <h2 class="hiring__title">We’re hiring</h2>
-      <p class="hiring__subtitle">
-        We’re a team of lifelong learners. We’re equal parts left and right
-        brained.
-      </p>
-      <a href="#" class="hiring__button button">More about Company</a>
-      <div class="hiring__blocks">
-        <div class="hiring__block-group">
-          <div class="hiring__block  hiring__block_front">
-            <div class="hiring__block-info">
-              <h3 class="hiring__block-title">Front-End Developer</h3>
-              <p class="hiring__block-text">Los Angeles / Remote</p>
-            </div>
-            <div class="hiring__block-link hiring__block-link_front">></div>
-          </div>
-          <p class="hiring__popup-text hiring__popup-text_front">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero
-            nobis sit, optio facere architecto ratione accusantium maxime iure
-            sequi quae tenetur sunt delectus assumenda.
-          </p>
-        </div>
-        <div class="hiring__block-group">
-          <div class="hiring__block hiring__block_community">
-            <div class="hiring__block-info">
-              <h3 class="hiring__block-title">Community Manager</h3>
-              <p class="hiring__block-text">New York / Full-Time</p>
-            </div>
-            <div class="hiring__block-link hiring__block-link_community">></div>
-          </div>
-          <p class="hiring__popup-text hiring__popup-text_community">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero
-            nobis sit, optio facere architecto ratione accusantium maxime iure
-            sequi quae tenetur sunt delectus assumenda.
-          </p>
-        </div>
-        <div class="hiring__block-group">
-          <div class="hiring__block hiring__block_designer">
-            <div class="hiring__block-info">
-              <h3 class="hiring__block-title">Designer</h3>
-              <p class="hiring__block-text">UX/UI Designer</p>
-            </div>
-            <div class="hiring__block-link hiring__block-link_designer">></div>
-          </div>
-          <p class="hiring__popup-text hiring__popup-text_designer">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero
-            nobis sit, optio facere architecto ratione accusantium maxime iure
-            sequi quae tenetur sunt delectus assumenda.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="start-form" class="start" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="start__left">
-        <img class="start__img" src="./img/start.png" alt="" data-aos="flip-left" />
-      </div>
-      <div class="start__right">
-        <h2 class="start__title">Start your free trial.</h2>
-        <p class="start__text">
-          Get notified about company updates, news and blog posts. We hate
-          spam.
         </p>
-        <form class="start__form">
-          <input class="start__input" type="text" placeholder="Enter your email" /><a class="button" href="#">Get
-            Started</a>
-        </form>
-        <p class="start__bottom-text">
-          Free 14-day trial · Easy setup · Cancel any time. Check out
-          <a class="start__bottom-link" href="#">Terms of Use</a>.
-        </p>
-      </div>
-    </section>
-  </main>
+        <div class="mob-block__member">
+          <img class="mob-block__photo" src="./img/rev.png" alt="" />
+          <div class="mob-block__data">
+            <p class="mob-block__name">Viella Malcovich</p>
+            <p class="mob-block__position">Creative Director at Johnson</p>
+          </div>
+        </div>
+      </section>
 
-  <footer class="footer" data-aos="fade-down">
-    <div class="footer__main">
-      <div class="footer__top">
-        <div class="logo footer__logo">
-          <img class="logo__img footer__img" src="./img/footer-Icon.png" alt="logo" />
-          <div class="logo__desc-group">
-            <p class="logo__desc-top footer__desc-top">Foundation</p>
-            <p class="logo__desc-bottom footer__logo-desc">
-              Startup landing template
+      <section
+        class="trusted"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        <h2 class="trusted__title">
+          Trusted by the world’s most innovative businesses – big and small
+        </h2>
+        <div class="slider">
+          <div class="slider__block">
+            <blockquote class="slider__text">
+              “Comprehensive set of startup tools for all imaginable
+              entrepreneurial needs. Create landing pages, send emails, find
+              freelancers. Perfect for sales, marketing, and support!”
+            </blockquote>
+            <p class="slider__name">Viella Malcovich</p>
+            <p class="slider__position">Creative Director at Johnson</p>
+          </div>
+          <div class="slider__block">
+            <blockquote class="slider__text">
+              “Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis nam consequatur nulla, dolore blanditiis dolorum
+              officiis laboriosam error recusandae cum!”
+            </blockquote>
+            <p class="slider__name">Lorem, ipsum.</p>
+            <p class="slider__position">Lorem ipsum dolor sit.</p>
+          </div>
+          <div class="slider__block">
+            <blockquote class="slider__text">
+              “Consequatur nulla, dolore blanditiis dolorum officiis laboriosam
+              error recusandae cum! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Reiciendis nam.”
+            </blockquote>
+            <p class="slider__name">Dolor Sit</p>
+            <p class="slider__position">Consectetur adipisicing elit</p>
+          </div>
+          <div class="slider__buttons">
+            <a class="slider__arrow slider__arrow_prev">&#10094;</a>
+            <div class="slider__btn"></div>
+            <div class="slider__btn"></div>
+            <div class="slider__btn"></div>
+            <a class="slider__arrow slider__arrow_next">&#10095;</a>
+          </div>
+        </div>
+        <img class="trusted__img" src="./img/trusted.png" alt="" />
+      </section>
+
+      <section
+        class="hiring"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        <h2 class="hiring__title">We’re hiring</h2>
+        <p class="hiring__subtitle">
+          We’re a team of lifelong learners. We’re equal parts left and right
+          brained.
+        </p>
+        <a href="#" class="hiring__button button">More about Company</a>
+        <div class="hiring__blocks">
+          <div class="hiring__block-group">
+            <div class="hiring__block" data="front">
+              <div class="hiring__block-info">
+                <h3 class="hiring__block-title">Front-End Developer</h3>
+                <p class="hiring__block-text">Los Angeles / Remote</p>
+              </div>
+              <i
+                class="far fa-arrow-alt-circle-left hiring__block-link"
+                data="front"
+              ></i>
+            </div>
+            <p class="hiring__popup-text" data="front">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+              vero nobis sit, optio facere architecto ratione accusantium maxime
+              iure sequi quae tenetur sunt delectus assumenda.
+            </p>
+          </div>
+          <div class="hiring__block-group">
+            <div class="hiring__block" data="community">
+              <div class="hiring__block-info">
+                <h3 class="hiring__block-title">Community Manager</h3>
+                <p class="hiring__block-text">New York / Full-Time</p>
+              </div>
+              <i
+                class="far fa-arrow-alt-circle-left hiring__block-link"
+                data="community"
+              ></i>
+            </div>
+            <p class="hiring__popup-text" data="community">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+              vero nobis sit, optio facere architecto ratione accusantium maxime
+              iure sequi quae tenetur sunt delectus assumenda.
+            </p>
+          </div>
+          <div class="hiring__block-group">
+            <div class="hiring__block" data="designer">
+              <div class="hiring__block-info">
+                <h3 class="hiring__block-title">Designer</h3>
+                <p class="hiring__block-text">UX/UI Designer</p>
+              </div>
+              <i
+                class="far fa-arrow-alt-circle-left hiring__block-link"
+                data="designer"
+              ></i>
+            </div>
+            <p class="hiring__popup-text" data="designer">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+              vero nobis sit, optio facere architecto ratione accusantium maxime
+              iure sequi quae tenetur sunt delectus assumenda.
             </p>
           </div>
         </div>
-        <p class="footer__text">
-          Foundation is a website template for startups and small teams. It
-          helps to build a website in no time.
-        </p>
-        <div class="footer__app-links">
-          <a class="footer__app-link" href="#"><img src="./img/app-store.png" alt="" /></a>
-          <a class="footer__app-link" href="#">
-            <img src="./img/google-play.png" alt="" /></a>
+      </section>
+
+      <section
+        id="start-form"
+        class="start"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        <div class="start__left">
+          <img
+            class="start__img"
+            src="./img/start.png"
+            alt=""
+            data-aos="flip-left"
+          />
+        </div>
+        <div class="start__right">
+          <h2 class="start__title">Start your free trial.</h2>
+          <p class="start__text">
+            Get notified about company updates, news and blog posts. We hate
+            spam.
+          </p>
+          <form class="start__form">
+            <input
+              class="start__input"
+              type="text"
+              placeholder="Enter your email"
+            /><a class="button" href="#">Get Started</a>
+          </form>
+          <p class="start__bottom-text">
+            Free 14-day trial · Easy setup · Cancel any time. Check out
+            <a class="start__bottom-link" href="#">Terms of Use</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" data-aos="fade-down">
+      <div class="footer__main">
+        <div class="footer__top">
+          <div class="logo footer__logo">
+            <img
+              class="logo__img footer__img"
+              src="./img/footer-Icon.png"
+              alt="logo"
+            />
+            <div class="logo__desc-group">
+              <p class="logo__desc-top footer__desc-top">Foundation</p>
+              <p class="logo__desc-bottom footer__logo-desc">
+                Startup landing template
+              </p>
+            </div>
+          </div>
+          <p class="footer__text">
+            Foundation is a website template for startups and small teams. It
+            helps to build a website in no time.
+          </p>
+          <div class="footer__app-links">
+            <a class="footer__app-link" href="#"
+              ><img src="./img/app-store.png" alt=""
+            /></a>
+            <a class="footer__app-link" href="#">
+              <img src="./img/google-play.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__menu-blocks">
+            <div class="footer__menu footer__menu-block">
+              <p class="footer__title">Product</p>
+              <nav>
+                <ul>
+                  <li><a href="#" class="footer__link">Acquire Users</a></li>
+                  <li>
+                    <a href="#" class="footer__link">Content Marketing</a>
+                  </li>
+                  <li>
+                    <a href="#" class="footer__link">Website Templates</a>
+                  </li>
+                  <li>
+                    <a href="#" class="footer__link">Customer Management</a>
+                  </li>
+                  <li><a href="#" class="footer__link">Virtual Inbox</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__menu footer__menu-block">
+              <p class="footer__title">Company</p>
+              <nav>
+                <ul class="footer__links">
+                  <li><a href="#" class="footer__link">About Foundation</a></li>
+                  <li><a href="#" class="footer__link">Brand Guidelines</a></li>
+                  <li><a href="#" class="footer__link">Press Kit</a></li>
+                  <li><a href="#" class="footer__link">Support</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="footer__bottom">
-        <div class="footer__menu-blocks">
-          <div class="footer__menu footer__menu-block">
-            <p class="footer__title">Product</p>
-            <nav>
-              <ul>
-                <li><a href="#" class="footer__link">Acquire Users</a></li>
-                <li>
-                  <a href="#" class="footer__link">Content Marketing</a>
-                </li>
-                <li>
-                  <a href="#" class="footer__link">Website Templates</a>
-                </li>
-                <li>
-                  <a href="#" class="footer__link">Customer Management</a>
-                </li>
-                <li><a href="#" class="footer__link">Virtual Inbox</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="footer__menu footer__menu-block">
-            <p class="footer__title">Company</p>
-            <nav>
-              <ul class="footer__links">
-                <li><a href="#" class="footer__link">About Foundation</a></li>
-                <li><a href="#" class="footer__link">Brand Guidelines</a></li>
-                <li><a href="#" class="footer__link">Press Kit</a></li>
-                <li><a href="#" class="footer__link">Support</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer__bott-menu">
-      <nav>
-        <ul class="footer__menu footer__menu_bottom">
+      <div class="footer__bott-menu">
+        <nav>
+          <ul class="footer__menu footer__menu_bottom">
+            <li>
+              <a href="#" class="footer__link footer__link_bottom">Terms</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link footer__link_bottom">Privacy</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link footer__link_bottom">License</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer__social-links">
           <li>
-            <a href="#" class="footer__link footer__link_bottom">Terms</a>
+            <a href="#" class="footer__social-icon"
+              ><i class="fab fa-twitter footer__link"></i
+            ></a>
           </li>
           <li>
-            <a href="#" class="footer__link footer__link_bottom">Privacy</a>
+            <a href="#" class="footer__social-icon">
+              <i class="fab fa-facebook-f footer__link"></i
+            ></a>
           </li>
           <li>
-            <a href="#" class="footer__link footer__link_bottom">License</a>
+            <a href="#" class="footer__social-icon">
+              <i class="fab fa-linkedin-in footer__link"></i
+            ></a>
           </li>
         </ul>
-      </nav>
-      <ul class="footer__social-links">
-        <li>
-          <a href="#" class="footer__social-icon"><img src="./img/icon-twitter.png" alt="Twitter" /></a>
-        </li>
-        <li>
-          <a href="#" class="footer__social-icon">
-            <img src="./img/icon-fb.png" alt="Facebook" /></a>
-        </li>
-        <li>
-          <a href="#" class="footer__social-icon">
-            <img src="./img/LinkedIn.png" alt="LinkedIn" /></a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  <script src="./index.js"></script>
-  <script>
-    AOS.init({
-      offset: 150,
-      duration: 1000,
-      easing: 'ease-in-quad',
-      delay: 0,
-      disable: 'mobile',
-      once: true,
-    });
-  </script>
-</body>
-
+      </div>
+    </footer>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="./index.js"></script>
+    <script>
+      AOS.init({
+        offset: 150,
+        duration: 1000,
+        easing: "ease-in-quad",
+        delay: 0,
+        disable: "mobile",
+        once: true,
+      });
+    </script>
+  </body>
 </html>

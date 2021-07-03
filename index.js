@@ -1,71 +1,82 @@
-const popup = document.querySelector('.popup')
-const popupMenu = document.querySelector('.popup__menu')
-const featuresTitle = document.querySelector('.features__bottom-title')
-const featuresText = document.querySelector('.features__bottom-text')
-const hiringFront = document.querySelector('.hiring__block_front')
-const hiringCommunity = document.querySelector('.hiring__block_community')
-const hiringDesigner = document.querySelector('.hiring__block_designer')
-const hiringFrontText = document.querySelector('.hiring__popup-text_front')
-const hiringCommunityText = document.querySelector('.hiring__popup-text_community')
-const hiringDesignerText = document.querySelector('.hiring__popup-text_designer')
-const burger = document.querySelector('.burger')
-const arrowFront = hiringFront.querySelector('.hiring__block-link_front')
-const arrowCommunity = hiringCommunity.querySelector('.hiring__block-link_community')
-const arrowDesigner = hiringDesigner.querySelector('.hiring__block-link_designer')
+const openHeaderNav = () => {
+  const popup = document.querySelector(".menu__library");
+  const popupMenu = document.querySelector(".popup__menu");
+  const burger = document.querySelector(".burger");
+  const openPopup = () => popupMenu.classList.toggle("popup__menu_active");
+  const openBurger = () => popupMenu.classList.toggle("popup__menu_active");
+  popup.addEventListener("click", openPopup);
+  burger.addEventListener("click", openBurger);
+};
 
-function openHeaderNav() {
-  const openPopup = () => popupMenu.classList.toggle('popup__menu_active')
-  const openBurger = () => popupMenu.classList.toggle('popup__menu_active');
-  popup.addEventListener('click', openPopup)
-  burger.addEventListener('click', openBurger)
-}
-openHeaderNav()
+const toggleSlider = () => {
+  const sliderArrowPrev = document.querySelector(".slider__arrow_prev");
+  const sliderArrowNext = document.querySelector(".slider__arrow_next");
+  const dots = document.querySelectorAll(".slider__btn");
+  let slideIndex = 1;
+  const showSlides = (n) => {
+    const slides = document.querySelectorAll(".slider__block");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" slider__btn_active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " slider__btn_active";
+  };
+  showSlides(slideIndex);
+  const plusSlide = () => {
+    showSlides((slideIndex += 1));
+  };
+  const minusSlide = () => {
+    showSlides((slideIndex -= 1));
+  };
+  const currentSlide = (n) => {
+    showSlides((slideIndex = n));
+  };
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      const idx = i + 1;
+      currentSlide(idx);
+    });
+  });
+  sliderArrowPrev.addEventListener("click", minusSlide);
+  sliderArrowNext.addEventListener("click", plusSlide);
+};
 
-function openHiringInfo() {
-  function openFrontText() {
-    hiringFrontText.classList.toggle('hiring__popup-text_active');
-    arrowFront.classList.toggle('hiring__block-link_active'); hiringFront.classList.toggle('hiring__block_active')
+const openHiringBlocks = () => {
+  const hiringTexts = document.querySelectorAll(".hiring__popup-text");
+  const hiringBlocks = document.querySelectorAll(".hiring__block");
+  const hiringArrows = document.querySelectorAll(".hiring__block-link");
+  function toggleHiringBlocks() {
+    this.classList.toggle("hiring__block_active");
+    const dataBlock = this.getAttribute("data");
+    hiringTexts.forEach((text) => {
+      hiringArrows.forEach((arrow) => {
+        const dataArrow = arrow.getAttribute("data");
+        const dataText = text.getAttribute("data");
+        if (dataArrow === dataBlock && dataText === dataBlock) {
+          arrow.classList.toggle("hiring__block-link_active");
+          text.classList.toggle("hiring__popup-text_active");
+        }
+      });
+    });
   }
-  function openDesignerText() {
-    hiringDesignerText.classList.toggle('hiring__popup-text_active');
-    arrowDesigner.classList.toggle('hiring__block-link_active'); hiringDesigner.classList.toggle('hiring__block_active')
-  }
-  function openCommunityText() {
-    hiringCommunityText.classList.toggle('hiring__popup-text_active');
-    arrowCommunity.classList.toggle('hiring__block-link_active'); hiringCommunity.classList.toggle('hiring__block_active')
-  }
-  hiringFront.addEventListener('click', openFrontText)
-  hiringDesigner.addEventListener('click', openDesignerText)
-  hiringCommunity.addEventListener('click', openCommunityText)
-}
-openHiringInfo()
+  hiringBlocks.forEach((block) => {
+    block.addEventListener("click", toggleHiringBlocks);
+  });
+};
 
-function openFeaturesInfo() {
-  const toggleFeaturesText = () => featuresText.classList.toggle('features_active')
-  featuresTitle.addEventListener('click', toggleFeaturesText)
+function init() {
+  openHeaderNav();
+  openHiringBlocks();
+  toggleSlider();
 }
-openFeaturesInfo()
 
-let slideIndex = 1;
-showSlides(slideIndex);
-const plusSlide = () => { showSlides(slideIndex += 1); }
-const minusSlide = () => { showSlides(slideIndex -= 1); }
-const currentSlide = (n) => { showSlides(slideIndex = n); }
-function showSlides(n) {
-  let slides = document.getElementsByClassName("slider__block");
-  let dots = document.getElementsByClassName("slider__btn");
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" slider__btn_active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " slider__btn_active";
-}
+init();
